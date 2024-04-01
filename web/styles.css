@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    display: none;
+}
+
+#drawText {
+    position: fixed;
+    top: 45%;
+    left: 55%; 
+    transform: translate(-50%, -50%) scale(0.2);
+    display: flex;
+    align-items: center;
+    animation: zoomIn 0.5s forwards;
+}
+
+@keyframes zoomIn {
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+#keyContainer {
+    position: relative;
+}
+
+#outerBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 38px; 
+    height: 38px; 
+    border: 2px solid #fff;
+    border-radius: 8px;
+    animation: shake 2s infinite, breathe 2s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#keyBox {
+    width: 28px; 
+    height: 28px; 
+    background-color: black;
+    margin: 5px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+#key {
+    font-size: 24px;
+    color: #fff;
+}
+
+#text {
+    font-size: 18px;
+    color: #ecf0f1;
+    opacity: 0;
+    animation: fadeInRight 0.5s 0.5s forwards;
+    position: relative;
+    left: 10px; 
+}
+@keyframes breathe {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+}
+@keyframes shake {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25%, 75% {
+        transform: translate(-50%, -50%) rotate(-2deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(2deg);
+    }
+}
+
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOutLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes zoomOut {
+    to {
+        transform: scale(0);
+    }
+}
+
+#text {
+    font-size: 18px;
+    color: #ecf0f1;
+    opacity: 0;
+}
