@@ -3,9 +3,8 @@ window.addEventListener("message", (event) => {
 
     if (event.data.action === "show") {
 		$("body").fadeIn(1);
-        const newText = event.data.message.slice(3);
         document.getElementById("key").innerText = event.data.key;
-        document.getElementById("text").innerText = newText;
+        document.getElementById("text").innerText = event.data.message;
         drawTextElement.style.display = "flex";
     } else if (event.data.action === "hide") {
         const keyBoxElement = document.getElementById("keyBox");
