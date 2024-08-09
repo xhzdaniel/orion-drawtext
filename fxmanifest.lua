@@ -1,7 +1,9 @@
 fx_version 'adamant'
 
 game 'gta5'
+lua54 'yes'
 
+title 'orion-drawtext'
 author 'Orion Store'
 version '1.0'
 
